@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tawa Kitchen</title>
+    <style>
+        h1{
+            text-align: center;
+            color: red;
+        }
+        .col{
+            background-color: white;
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
-<body>
-    
+<body style="background-color: rgb(141, 228, 241)">
+<h1><ins>ORDERS</ins></h1>
+<div class="container" id="cont">
+    <div class="col p-4 mx-auto">
+        <form id="form" novalidate>
+            <label for="price">Choose Price:</label>
+            <input type="number" id="price" name="price">
+            <label for="dish">Choose Dish:</label>
+            <input type="text" id="dish" name="dish">
+            <label for="table">Choose Table</label>
+            <select id="table" name="table">
+                <option value="table 1">Table 1</option>
+                <option value="table 2">Table 2</option>
+                <option value="table 3">Table 3</option>
+            </select>
+            <input id="buttn" type="submit" value="Add to Bill" >
+        </form>
+   </div>
+   <div id="col2" class="col p-4 mx-auto my-5">
+        <h2>Table 1</h2><br>
+        <ul class="list-group" id="t1"></ul>
+        <h2>Table 2</h2><br>
+        <ul class="list-group" id="t2"></ul>
+        <h2>Table 3</h2>
+        <ul class="list-group" id="t3"></ul>
+   </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
